@@ -20,8 +20,8 @@
   </head>
   <body>
     <!--Header-->
-    <!-- <header class="header">
-      <div class="header-container container">
+    <header class="header">
+      <div class="header-container">
         <nav class="nav">
           <a class="logo link" href="./index.html">
             Web<span class="studio">Studio</span></a
@@ -42,6 +42,15 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-togle-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
         <address class="addressa">
           <ul class="list contacts link">
             <li class="contact-mail link">
@@ -57,7 +66,7 @@
           </ul>
         </address>
       </div>
-    </header> -->
+    </header>
     <!--Main-->
     <main class="main">
       <section class="hero">
@@ -68,8 +77,8 @@
           </button>
         </div>
       </section>
-      <!-- <section class="section-two">
-        <div class="container feature-container">
+      <section class="section-two">
+        <div class="feature-container">
           <h2 class="features visually-hidden">Our Features</h2>
           <ul class="list link our-features">
             <li class="features-item link">
@@ -155,7 +164,7 @@
         </div>
       </section>
       <section class="section-four">
-        <div class="container container-team">
+        <div class="container-team">
           <h2 class="team titles our-team-title">Our Team</h2>
           <ul class="list img-team link">
             <li class="name-prof link">
@@ -358,7 +367,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
+      -->
     </main>
     <!--Footer-->
     <!-- <footer class="footer">
@@ -507,6 +517,37 @@
         </form>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <!-------------MOBILE MENU------------->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <ul class="mobile-menu">
+        <li><a href="" class="link">About</a></li>
+        <li><a href="" class="link">Products</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+        <li><a href="" class="link">Career</a></li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
