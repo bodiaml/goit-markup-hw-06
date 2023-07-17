@@ -24,6 +24,8 @@ body {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 li {
@@ -45,21 +47,25 @@ li {
 }
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
 /*======================================Heder================================*/
 
 .header {
+  height: 72px;
   border-bottom: 1px solid #e7e9fc;
-
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-container {
-  padding: 24px 16px;
-  height: 72px;
+  padding-left: 16px;
+  padding-right: 16px;
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -75,9 +81,14 @@ li {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
   .header-container {
     max-width: 768px;
-    padding: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   nav .menu {
     display: flex;
@@ -89,19 +100,25 @@ li {
     color: #434455;
   }
   .address {
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
+    color: var(--slate, #434455);
   }
 }
 
 @media screen and (min-width: 1158px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
   .header-container {
     max-width: 1440px;
-    padding: 24px 156px;
+    padding-left: 156px;
+    padding-right: 156px;
   }
   .contacts {
     display: flex;
@@ -181,14 +198,6 @@ li {
   color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /*===============================/Main=============================*/
 
@@ -202,6 +211,18 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("..//images/people-office1@2x.png");
+  }
 }
 
 .hero-container {
@@ -213,8 +234,6 @@ li {
 @media screen and (min-width: 320px) {
   .hero-container {
     max-width: 428px;
-    padding-top: 112px;
-    padding-bottom: 112px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -225,9 +244,11 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  .hero-container {
+  .hero {
     padding-top: 112px;
     padding-bottom: 112px;
+  }
+  .hero-container {
     max-width: 768px;
   }
   .hero-image {
@@ -240,10 +261,12 @@ li {
 }
 
 @media screen and (min-width: 1158px) {
-  .hero-container {
-    max-width: 1440px;
+  .hero {
     padding-top: 188px;
     padding-bottom: 188px;
+  }
+  .hero-container {
+    max-width: 1440px;
   }
   .order-bt {
     margin-top: 48px;
@@ -332,10 +355,12 @@ li {
 }
 
 @media screen and (min-width: 320px) {
-  .feature-container {
-    max-width: 428px;
+  .section-two {
     padding-top: 96px;
     padding-bottom: 96px;
+  }
+  .feature-container {
+    max-width: 428px;
   }
   .our-features {
     display: flex;
@@ -358,10 +383,12 @@ li {
 }
 
 @media screen and (min-width: 768px) {
-  .feature-container {
-    max-width: 768px;
+  .section-two {
     padding-top: 96px;
     padding-bottom: 96px;
+  }
+  .feature-container {
+    max-width: 768px;
   }
   .our-features {
     display: flex;
@@ -383,10 +410,12 @@ li {
 }
 
 @media screen and (min-width: 1158px) {
-  .feature-container {
-    max-width: 1440px;
+  .section-two {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
+  .feature-container {
+    max-width: 1158px;
   }
   .features-item {
     width: calc((100% - 72px) / 4);
@@ -432,6 +461,10 @@ li {
 
 .section-three {
   padding-bottom: 120px;
+}
+
+.doing-cont {
+  max-width: 1158px;
 }
 
 @media screen and (max-width: 1157px) {
@@ -480,10 +513,13 @@ li {
 }
 
 @media screen and (min-width: 320px), (max-width: 757px) {
+  .section-four {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
   .container-team {
     min-width: 320px;
     max-width: 428px;
-    padding: 96px 82px;
   }
   .img-team {
     display: flex;
@@ -498,7 +534,6 @@ li {
 @media screen and (min-width: 768px) {
   .container-team {
     max-width: 768px;
-    padding: 96px 108px;
   }
   .img-team {
     display: flex;
@@ -510,9 +545,12 @@ li {
 }
 
 @media screen and (min-width: 1158px) {
+  .section-four {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
   .container-team {
-    max-width: 1440px;
-    padding: 120px 156px;
+    max-width: 1158px;
   }
   .img-team {
     display: flex;
@@ -614,6 +652,10 @@ li {
 
 /*======================== Company SVG=====================*/
 
+.customers {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
 .customers-container {
   margin-left: auto;
   margin-right: auto;
@@ -622,10 +664,10 @@ li {
 @media screen and (min-width: 320px) {
   .customers-container {
     max-width: 428px;
-    padding: 96px 16px;
   }
   .svg-item {
-    flex-basis: calc((100% - 16px) / 2);
+    width: 190px;
+
     height: 88px;
   }
   .svg-list {
@@ -633,14 +675,13 @@ li {
     row-gap: 72px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
 @media screen and (min-width: 768px) {
   .customers-container {
     max-width: 768px;
-    padding-top: 96px;
-    padding-bottom: 96px;
   }
 
   .svg-item {
@@ -663,10 +704,12 @@ li {
 }
 
 @media screen and (min-width: 1158px) {
+  .section-four {
+    padding-top: 120pxpx;
+    padding-bottom: 120pxpx;
+  }
   .customers-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    max-width: 1440px;
+    max-width: 1158px;
   }
   .svg-list {
     display: flex;
@@ -727,14 +770,14 @@ li {
 
 .footer {
   background: #2e2f42;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-container {
   display: flex;
   /* flex-direction: column; */
   /* align-items: baseline; */
-  padding-top: 96px;
-  padding-bottom: 96px;
 }
 @media screen and (min-width: 320px) {
   .footer-container {
@@ -776,8 +819,6 @@ li {
 @media screen and (min-width: 768px) {
   .footer-container {
     max-width: 768px;
-    padding-top: 96px;
-    padding-bottom: 96px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -790,17 +831,23 @@ li {
   .logo-text-footer {
     display: flex;
     flex-direction: column;
-    margin-left: 93px;
+    margin-left: 0;
     margin-right: 0;
   }
   .text-foot {
     margin-bottom: 0;
+  }
+  @media screen and (max-width: 1157px) {
+    .footer-container {
+      padding-left: 108px;
+    }
   }
   /* ---------------SOCIAL MEDIA----------------- */
   .social-media-footer {
     display: flex;
     flex-direction: column;
     margin-left: 0;
+    margin-right: 0;
   }
   .social-media {
     text-align: start;
@@ -811,7 +858,7 @@ li {
   }
   /* -------------------SUBSCRIVE----------------- */
   .container-form {
-    margin-left: 93px;
+    margin-left: 0px;
   }
   .subscribe {
     text-align: start;
@@ -830,16 +877,19 @@ li {
 }
 
 @media screen and (min-width: 1158px) {
-  .footer-container {
-    max-width: 1440px;
+  .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .footer-container {
     display: flex;
     flex-wrap: nowrap;
     gap: 0;
+    max-width: 1158px;
   }
   .logo-text-footer {
-    margin-left: auto;
+    padding-left: 0;
+    margin-left: 0;
     margin-right: 120px;
   }
   .social-media-footer {
@@ -1366,7 +1416,6 @@ li {
 .mobile-svg-list {
   display: flex;
   gap: 56px;
-  justify-content: center;
   padding-left: 0;
   margin: 0;
 }
